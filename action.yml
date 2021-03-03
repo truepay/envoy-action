@@ -1,0 +1,13 @@
+name: 'Envoy Proxy Action'
+description: 'Run envoy Proxy'
+inputs:
+  envoyConfigPath:
+    description: 'The envoy config path'
+    required: true
+runs:
+  using: docker
+  image: envoyproxy/envoy:v1.17-latest
+  args:
+    - --config-path
+    - ${{ inputs.envoyConfigPath }}
+
