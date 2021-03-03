@@ -10,7 +10,7 @@ runs:
   entrypoint: 'sh'
   args:
     - -c
-    - envoy
+    - /usr/local/bin/envoy
     - --config-path
     - ${{ inputs.envoyConfigPath }}
 
