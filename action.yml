@@ -7,10 +7,7 @@ inputs:
 runs:
   using: docker
   image: 'docker://envoyproxy/envoy:v1.17-latest'
-  entrypoint: 'sh'
   args:
-    - -c
-    - /usr/local/bin/envoy
     - --config-path
     - ${{ inputs.envoyConfigPath }}
 
