@@ -10,6 +10,7 @@ runs:
   entrypoint: 'sh'
   args:
     - -c
-    - cat
+    - envoy
+    - --config-path
     - ${{ inputs.envoyConfigPath }}
 
